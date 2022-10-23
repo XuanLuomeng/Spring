@@ -2,6 +2,26 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentThree" class="com.atguigu.spring.pojo.Student">
+        <constructor-arg value="1002"></constructor-arg>
+        <constructor-arg value="李四"></constructor-arg>
+        <constructor-arg value="24"></constructor-arg>
+        <constructor-arg value="男"></constructor-arg>
+    </bean>
+
+    <!--
+        property:通过成员变量的set方法进行赋值
+        name:设置需要赋值的属性名（和set方法有关）
+        value:设置为属性所赋的值
+    -->
+    <bean id="studentTwo" class="com.atguigu.spring.pojo.Student">
+        <property name="sid" value="1001"></property>
+        <property name="SName" value="张三"></property>
+        <property name="age" value="23"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+
     <!--
         bean:配置一个bean对象，将对象交给IOC容器管理
         属性：
@@ -9,4 +29,6 @@
         class：设置bean对象所对应的类型
     -->
     <bean id="helloWord" class="com.atguigu.spring.pojo.HelloWord"></bean>
+
+    <bean id="studentOne" class="com.atguigu.spring.pojo.Student"></bean>
 </beans>
