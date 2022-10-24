@@ -1,5 +1,6 @@
 package com.atguigu.spring.test;
 
+import com.atguigu.spring.pojo.Clazz;
 import com.atguigu.spring.pojo.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -28,7 +29,13 @@ public class IOCByXMLTest {
         //获取ioc容器
         ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
         //获取bean
-        Student student = ioc.getBean("studentThree", Student.class);
+//        Student student = ioc.getBean("studentFive", Student.class);
+//        System.out.println(student);
+//        Class clazz = ioc.getBean("clazzInner", Class.class);
+//        System.out.println(clazz);
+//        Clazz clazzOne = ioc.getBean("clazzOne", Clazz.class);
+//        System.out.println(clazzOne);
+        Student student = ioc.getBean("studentSix", Student.class);
         System.out.println(student);
     }
 
